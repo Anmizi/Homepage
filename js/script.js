@@ -9,16 +9,22 @@ fetch('https://v1.hitokoto.cn?c=i&c=d')
 
 // 箭头点击下拉
 let arrow = document.querySelector('.icon-arrowdown');
+// about页
 let about = document.querySelector('.about');
-arrow.addEventListener('click',function(event){
+// 鸡腿页
+let funny = document.querySelector('.funny');
+function aboutpage(n=1){
 	window.scrollTo({
-		top: window.innerHeight,
+		top: window.innerHeight * n,
 		behavior: 'smooth',
 	});
+}
+arrow.addEventListener('click', function(){
+	aboutpage();
+});
+about.addEventListener('click', function(){
+	aboutpage(2);
 })
-about.addEventListener('click',function(){
-	window.scrollTo({
-		top: window.innerHeight,
-		behavior: 'smooth',
-	});
+funny.addEventListener('click',function(){
+	aboutpage();
 })
