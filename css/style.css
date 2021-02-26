@@ -164,3 +164,6 @@ body{
 	color: #ccc;
 	/* background-color: #fff; */
 }
+#he-plugin-simple{
+	position: fixed!important;
+}
