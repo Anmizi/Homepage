@@ -11,8 +11,6 @@ fetch('https://v1.hitokoto.cn?c=i&c=d')
 let arrow = document.querySelector('.icon-arrowdown');
 // about页
 let about = document.querySelector('.about');
-// 鸡腿页
-let funny = document.querySelector('.funny');
 function aboutpage(n=1){
 	window.scrollTo({
 		top: window.innerHeight * n,
@@ -23,8 +21,5 @@ arrow.addEventListener('click', function(){
 	aboutpage();
 });
 about.addEventListener('click', function(){
-	aboutpage(2);
-})
-funny.addEventListener('click',function(){
 	aboutpage();
 })
